@@ -1,0 +1,142 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Gift Report</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><style>
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #eef2f7, #f9fbfd);
+}
+
+.container {
+    max-width: 950px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #222;
+}
+
+.section {
+    margin-bottom: 25px;
+}
+
+.section h3 {
+    margin-bottom: 10px;
+    padding-left: 10px;
+    border-left: 4px solid #007bff;
+    color: #333;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    gap: 12px;
+}
+
+input {
+    padding: 11px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0,123,255,0.15);
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background: #007bff;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+</style></head><body>
+<div class="container"><h2>Gift Legal Report</h2><form action="/generate/gift" method="post"><div class="section">
+<h3>Basic Details</h3>
+<div class="grid">
+<input name="DATE" placeholder="DATE">
+<input name="BRANCH_AREA" placeholder="BRANCH_AREA">
+<input name="APPLICATION_NO" placeholder="APPLICATION_NO">
+</div>
+</div><div class="section">
+<h3>Applicant Details</h3>
+<div class="grid">
+<input name="APPLICANT_NAME" placeholder="APPLICANT_NAME">
+<input name="APPLICANT_BOLD_OWNER" placeholder="APPLICANT_BOLD_OWNER">
+<input name="APPLICANT_FULL" placeholder="APPLICANT_FULL">
+<input name="APPLICANT_OWNER_FULL" placeholder="APPLICANT_OWNER_FULL">
+<input name="EXECUTANT_FULL" placeholder="EXECUTANT_FULL">
+<input name="RELATION" placeholder="RELATION">
+</div>
+</div><div class="section">
+<h3>Property Details</h3>
+<div class="grid">
+<input name="DEED_NO" placeholder="DEED_NO">
+<input name="DEED_DATE" placeholder="DEED_DATE">
+<input name="DEED_TYPE" placeholder="DEED_TYPE">
+<input name="SRO" placeholder="SRO">
+<input name="DOOR_NO" placeholder="DOOR_NO">
+<input name="Assessment_No" placeholder="Assessment_No">
+<input name="EXTENT_YARDS" placeholder="EXTENT_YARDS">
+<input name="SURVEY_NO" placeholder="SURVEY_NO">
+<input name="ADDRESS" placeholder="ADDRESS">
+<input name="VILLAGE" placeholder="VILLAGE">
+<input name="GRAM_PANCHAYAT" placeholder="GRAM_PANCHAYAT">
+<input name="MANDAL" placeholder="MANDAL">
+<input name="RO" placeholder="RO">
+<input name="DISTRICT" placeholder="DISTRICT">
+</div>
+</div><div class="section">
+<h3>Boundaries</h3>
+<div class="grid">
+<input name="EAST_BOUNDARY" placeholder="EAST_BOUNDARY">
+<input name="WEST_BOUNDARY" placeholder="WEST_BOUNDARY">
+<input name="NORTH_BOUNDARY" placeholder="NORTH_BOUNDARY">
+<input name="SOUTH_BOUNDARY" placeholder="SOUTH_BOUNDARY">
+</div>
+</div><div class="section">
+<h3>Measurements</h3>
+<div class="grid">
+<input name="E_W" placeholder="E_W">
+<input name="N_S" placeholder="N_S">
+<input name="E_W_FEET" placeholder="E_W_FEET">
+<input name="N_S_FEET" placeholder="N_S_FEET">
+<input name="EXTENT_FEET" placeholder="EXTENT_FEET">
+</div>
+</div><div class="section">
+<h3>Documents & Tax</h3>
+<div class="grid">
+<input name="H_T_DATE" placeholder="H_T_DATE">
+<input name="H_T_RECIPT_NO" placeholder="H_T_RECIPT_NO">
+<input name="FINANCIAL_YEARS" placeholder="FINANCIAL_YEARS">
+<input name="HOUSE_TAX_NAME" placeholder="HOUSE_TAX_NAME">
+<input name="HOUSE_TAX_ISSUED_BY" placeholder="HOUSE_TAX_ISSUED_BY">
+<input name="EC_DATE" placeholder="EC_DATE">
+<input name="EC_NO" placeholder="EC_NO">
+<input name="WORTH" placeholder="WORTH">
+</div>
+</div><button type="submit">Generate Document</button>
+
+</form></div>
+</body>
+</html>
